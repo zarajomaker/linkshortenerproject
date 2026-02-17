@@ -9,7 +9,9 @@ export function SignInButtonComponent() {
   return (
     <Button 
       variant="outline" 
-      onClick={() => openSignIn()}
+      onClick={() => openSignIn({
+        forceRedirectUrl: '/dashboard'
+      })}
     >
       Sign in
     </Button>
@@ -21,7 +23,9 @@ export function SignUpButtonComponent() {
   
   return (
     <Button 
-      onClick={() => openSignUp()}
+      onClick={() => openSignUp({
+        forceRedirectUrl: '/dashboard'
+      })}
     >
       Sign up
     </Button>

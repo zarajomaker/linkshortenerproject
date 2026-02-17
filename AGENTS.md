@@ -206,6 +206,22 @@ Esta documentación debe actualizarse cuando:
 6. **Dark Mode Support** - Soportar modo claro y oscuro
 7. **Mobile First** - Diseño responsive desde el inicio
 
+### Middleware & Routing
+
+**⚠️ IMPORTANTE: NO usar middleware.ts**
+
+- El archivo `middleware.ts` está **DEPRECADO** en versiones recientes de Next.js
+- **SIEMPRE** usar `proxy.ts` en su lugar para configuración de middleware
+- Este proyecto utiliza `proxy.ts` en la raíz del proyecto para manejar routing y autenticación
+
+**Razón:**
+Next.js ha deprecado el uso de middleware.ts en favor de enfoques más modernos. En este proyecto específicamente utilizamos proxy.ts para mantener compatibilidad con las últimas versiones del framework.
+
+**Si necesitas configurar middleware:**
+1. **NUNCA** crees un archivo `middleware.ts`
+2. **SIEMPRE** edita o consulta `proxy.ts` en la raíz del proyecto
+3. Consulta la documentación oficial de Next.js sobre patrones de routing modernos
+
 ### Development Workflow
 ```bash
 # Desarrollo
